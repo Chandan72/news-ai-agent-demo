@@ -45,14 +45,14 @@ class GeminiNewsProcessor:
             # Initialize Gemini with optimal settings for news analysis
             self.llm = ChatGoogleGenerativeAI(
                 google_api_key=api_key,
-                model="gemini-1.5-flash",  # Fast and efficient for text analysis
+                model="gemini-2.5-pro",  # Fast and efficient for text analysis
                 temperature=0.3,  # Low temperature for consistent, factual analysis
                 max_tokens=2048,  # Sufficient for detailed analysis
                 top_p=0.8  # Good balance of creativity and focus
             )
             
             print("✅ Gemini AI Processor initialized successfully")
-            print(f"   Model: gemini-1.5-flash")
+            print(f"   Model: gemini-2.5-pro")
             print(f"   Temperature: 0.3 (factual analysis)")
             
         except Exception as e:
@@ -176,7 +176,7 @@ IMPORTANT: Return only valid JSON. Be specific and actionable in all insights.""
                 'total_articles_collected': len(original_articles),
                 'articles_analyzed': min(15, len(original_articles)),
                 'processing_timestamp': datetime.now().isoformat(),
-                'ai_model': 'gemini-1.5-flash',
+                'ai_model': 'gemini-2.5-pro',
                 'industry_focus': industry_focus
             }
             
@@ -247,7 +247,7 @@ IMPORTANT: Return only valid JSON. Be specific and actionable in all insights.""
 
 📅 REPORT DATE: {report_time}
 🎯 INDUSTRY FOCUS: {industry.upper()}
-🤖 AI MODEL: Gemini 1.5 Flash
+🤖 AI MODEL: Gemini 2.5 PRO
 📊 ANALYSIS STATUS: {analysis.get('analysis_metadata', {}).get('confidence_level', 'completed').upper()}
 
 ═══════════════════════════════════════════════════════════════════════════════

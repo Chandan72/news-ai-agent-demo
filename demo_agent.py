@@ -28,7 +28,7 @@ class NewsAggregationAgentDemo:
         print("""
 ╔════════════════════════════════════════════════════════════════╗
 ║                                                                ║
-║  🤖 AI NEWS AGGREGATION AGENT - LIVE DEMO                     ║
+║  🤖 AI NEWS AGGREGATION AGENT -  CHANDAN                       ║
 ║                                                                ║
 ║  Powered by: Google Gemini AI + Multi-Source Scraping         ║
 ║  Sources: Economic Times | Business Standard | Mint           ║
@@ -157,7 +157,7 @@ class NewsAggregationAgentDemo:
             }
             
             # Success summary
-            print(f"\n🎉 DEMO COMPLETED SUCCESSFULLY!")
+            print(f"\n🎉  COMPLETED SUCCESSFULLY!")
             print("=" * 70)
             print(f"📊 Performance Summary:")
             print(f"   • Total Time: {total_time:.1f} seconds")
@@ -220,9 +220,9 @@ def run_interactive_demo():
         results = agent.run_complete_demo(selected_industry)
         
         if results['status'] == 'success':
-            print(f"\n🏆 DEMO PRESENTATION READY!")
+            print(f"\n🏆  READY!")
             print("=" * 50)
-            print("Key Points for CEO Presentation:")
+            #print("Key Points for CEO Presentation:")
             print(f"✅ Processed {results['performance_metrics']['articles_collected']} articles automatically")
             print(f"✅ Analyzed content from {results['performance_metrics']['sources_used']} major news sources")
             print(f"✅ Generated executive intelligence report in {results['performance_metrics']['total_demo_time']}")
